@@ -1,0 +1,55 @@
+{
+  "name": "how-to-write-open-source-js",
+  "version": "0.0.0-semantically-released",
+  "description": "Code from Egghead.io [course](https://egghead.io/lessons/javascript-how-to-write-a-javascript-library-introduction?series=how-to-write-an-open-source-javascript-library) on \"How to write an Open Source JavaScript Library\"",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel src/index.js -o dist/index.js",
+    "postbuild": "cp src/starwars-names.json dist/starwars-names.json",
+    "commit": "git-cz",
+    "check-coverage": "istanbul check-coverage --statements 70 --branches 70 --functions 70 --lines 70",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
+    "test": "mocha src/index.test.js -w --compilers js:babel/register",
+    "test:single": "istanbul cover -x *.test.js _mocha -- -R spec src/index.test.js --compilers js:babel/register",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vasanthk/how-to-write-open-source-js.git"
+  },
+  "keywords": [
+    "random",
+    "star",
+    "wars",
+    "opensource"
+  ],
+  "author": "Vasanth Krishnamoorthy <vasa.httpster@gmail.com> (http://www.vasanthk.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vasanthk/how-to-write-open-source-js/issues"
+  },
+  "homepage": "https://github.com/vasanthk/how-to-write-open-source-js",
+  "dependencies": {
+    "unique-random-array": "1.0.0"
+  },
+  "devDependencies": {
+    "babel": "5.8.29",
+    "chai": "3.4.0",
+    "codecov.io": "0.1.6",
+    "commitizen": "2.3.0",
+    "cz-conventional-changelog": "1.1.4",
+    "ghooks": "0.3.2",
+    "istanbul": "0.4.0",
+    "mocha": "2.3.3",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test:single && npm run check-coverage"
+    }
+  }
+}
