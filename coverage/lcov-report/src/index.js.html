@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>15/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>6/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/14</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">1 branch</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+// istanbul ignore next
+&nbsp;
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? <span class="branch-0 cbranch-skip" title="branch not covered" >obj </span>: { 'default': obj }; }
+&nbsp;
+var _uniqueRandomArray = require('unique-random-array');
+&nbsp;
+var _uniqueRandomArray2 = _interopRequireDefault(_uniqueRandomArray);
+&nbsp;
+var _starwarsNamesJson = require('./starwars-names.json');
+&nbsp;
+var _starwarsNamesJson2 = _interopRequireDefault(_starwarsNamesJson);
+&nbsp;
+var getRandomCharacter = (0, _uniqueRandomArray2['default'])(_starwarsNamesJson2['default']);
+&nbsp;
+function random(number) {
+  if (number === undefined) {
+    return getRandomCharacter();
+  } else {
+    var randomCharacters = [];
+    for (var i = 0; i &lt; number; i++) {
+      randomCharacters.push(getRandomCharacter());
+    }
+    return randomCharacters;
+  }
+}
+&nbsp;
+module.exports = {
+  all: _starwarsNamesJson2['default'],
+  random: random
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25pc2hhbnQvbGlicmFyeS9zcmMvaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7O2lDQUE4QixxQkFBcUI7Ozs7aUNBQ3pCLHVCQUF1Qjs7OztBQUNqRCxJQUFJLGtCQUFrQixHQUFHLG1FQUFnQyxDQUFDOztBQUUxRCxTQUFTLE1BQU0sQ0FBQyxNQUFNLEVBQUU7QUFDdEIsTUFBSSxNQUFNLEtBQUssU0FBUyxFQUFFO0FBQ3hCLFdBQU8sa0JBQWtCLEVBQUUsQ0FBQztHQUM3QixNQUFNO0FBQ0wsUUFBSSxnQkFBZ0IsR0FBRyxFQUFFLENBQUM7QUFDMUIsU0FBSyxJQUFJLENBQUMsR0FBRyxDQUFDLEVBQUUsQ0FBQyxHQUFHLE1BQU0sRUFBRSxDQUFDLEVBQUUsRUFBRTtBQUMvQixzQkFBZ0IsQ0FBQyxJQUFJLENBQUMsa0JBQWtCLEVBQUUsQ0FBQyxDQUFDO0tBQzdDO0FBQ0QsV0FBTyxnQkFBZ0IsQ0FBQztHQUN6QjtDQUNGOztBQUVELE1BQU0sQ0FBQyxPQUFPLEdBQUc7QUFDZixLQUFHLGdDQUFlO0FBQ2xCLFFBQU0sRUFBRSxNQUFNO0NBQ2YsQ0FBQyIsImZpbGUiOiIvaG9tZS9uaXNoYW50L2xpYnJhcnkvc3JjL2luZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHVuaXF1ZVJhbmRvbUFycmF5IGZyb20gJ3VuaXF1ZS1yYW5kb20tYXJyYXknO1xuaW1wb3J0IHN0YXJXYXJzTmFtZXMgZnJvbSAnLi9zdGFyd2Fycy1uYW1lcy5qc29uJztcbnZhciBnZXRSYW5kb21DaGFyYWN0ZXIgPSB1bmlxdWVSYW5kb21BcnJheShzdGFyV2Fyc05hbWVzKTtcblxuZnVuY3Rpb24gcmFuZG9tKG51bWJlcikge1xuICBpZiAobnVtYmVyID09PSB1bmRlZmluZWQpIHtcbiAgICByZXR1cm4gZ2V0UmFuZG9tQ2hhcmFjdGVyKCk7XG4gIH0gZWxzZSB7XG4gICAgdmFyIHJhbmRvbUNoYXJhY3RlcnMgPSBbXTtcbiAgICBmb3IgKHZhciBpID0gMDsgaSA8IG51bWJlcjsgaSsrKSB7XG4gICAgICByYW5kb21DaGFyYWN0ZXJzLnB1c2goZ2V0UmFuZG9tQ2hhcmFjdGVyKCkpO1xuICAgIH1cbiAgICByZXR1cm4gcmFuZG9tQ2hhcmFjdGVycztcbiAgfVxufVxuXG5tb2R1bGUuZXhwb3J0cyA9IHtcbiAgYWxsOiBzdGFyV2Fyc05hbWVzLFxuICByYW5kb206IHJhbmRvbVxufTsiXX0=</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jun 26 2016 13:40:09 GMT+0530 (IST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
